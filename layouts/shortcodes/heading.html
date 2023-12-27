@@ -1,0 +1,7 @@
+<h1 class="post-title"
+{{ with .Get "id"}}
+id="{{ . }}"
+{{ end }}
+>
+    {{ .Inner | markdownify }}
+</h1>

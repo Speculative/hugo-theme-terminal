@@ -1,0 +1,10 @@
+<img
+{{ with .Get "src" }}
+src="{{ . }}"
+{{ else }}
+{{ errorf "missing value for parameter 'src': %s" .Position }}
+{{ end }}
+class="side-image {{ .Get "dir" }}"
+>
+    {{ .Inner | markdownify }}
+</img>
